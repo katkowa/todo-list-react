@@ -3,6 +3,9 @@
 ## Description
 Simple aplication to manage your daily tasks. 
 
+## DEMO
+[Show in the browser](https://katkowa.github.io/todo-list-react/)
+
 ## Technologies
 - React.js
 - BEM
