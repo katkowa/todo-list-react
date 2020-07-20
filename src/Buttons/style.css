@@ -1,0 +1,30 @@
+@media(max-width: 767px) {
+    .buttonsContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+.buttonsContainer__button {
+    border: 0;
+    background-color: inherit;
+    color: teal;
+    transition: 0.5s;
+}
+
+.buttonsContainer__button:disabled {
+    color: #ddd;
+}
+
+.buttonsContainer__button:hover:enabled {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttonsContainer__button:active:enabled {
+    color: hsl(180, 100%, 45%);
+}
+
+.buttonsContainer__button:focus {
+    outline: 0;
+}
