@@ -21,6 +21,16 @@ function App() {
     setTasks(tasks => tasks.filter(task => task.id !== id));
   }
 
+  const toggleTaskDone = (id) => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    }));
+
+  }
+
   return (
     <div className="App">
       <Container>
@@ -37,10 +47,16 @@ function App() {
             <Buttons
               tasks={tasks}
               isDoneHide={isDoneHide}
-              toggleHideDone={toggleHideDone} />
+              toggleHideDone={toggleHideDone}
+            />
           }
           body={
-            <TasksList tasks={tasks} isDoneHide={isDoneHide} removeTask={removeTask}/>
+            <TasksList
+              tasks={tasks}
+              isDoneHide={isDoneHide}
+              removeTask={removeTask}
+              toggleTaskDone={toggleTaskDone}
+            />
           }
         />
 
