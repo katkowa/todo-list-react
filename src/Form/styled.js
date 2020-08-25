@@ -1,32 +1,32 @@
-.form {
+import styled from "styled-components";
+
+export const Wrapper = styled.form`
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
-}
 
-@media(max-width: 767px) {
-    .form {
+    @media(max-width: 767px) {
         grid-template-columns: 1fr;
     }
-}
+`;
 
-.form__input {
+export const Input = styled.input`
     padding: 10px;
-}
- 
-.form__button {
+`;
+
+export const Button = styled.button`
     color: #fff;
     background-color: teal;
     padding: 10px;
     border: 1px solid #ddd;
     transition: 1s;
-}
 
-.form__button:hover {
+    &:hover {
     background-color: #009696;
     transform: scale(1.1);
-}
+    }
 
-.form__button:active {
+    &:active {
     background-color: #00afaf;
-}
+    }
+`;

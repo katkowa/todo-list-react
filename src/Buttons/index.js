@@ -1,23 +1,21 @@
 import React from "react";
-import "./style.css";
+import { ButtonsContainer, Button } from "./styled";
 
 const Buttons = ({ tasks, isDoneHide, toggleHideDone, setAllDone }) => (
     tasks.length > 0 && (
-        <div className="buttonsContainer">
-            <button
+        <ButtonsContainer>
+            <Button
                 onClick={toggleHideDone}
-                className="buttonsContainer__button"
             >
                 {isDoneHide ? "Pokaż" : "Ukryj"} ukończone
-            </button>
-            <button
+            </Button>
+            <Button
                 onClick={setAllDone}
-                className="buttonsContainer__button"
                 disabled={tasks.every(({ done }) => done)}
             >
                 Ukończ wszystkie
-            </button>
-        </div>
+            </Button>
+        </ButtonsContainer>
     )
 );
 
