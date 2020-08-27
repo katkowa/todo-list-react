@@ -8,7 +8,8 @@ Simple aplication to manage your daily tasks.
 
 ## Technologies
 - React.js
-- BEM
+- Styled Components
+- Custom Hooks
 - CSS
 - HTML
 
