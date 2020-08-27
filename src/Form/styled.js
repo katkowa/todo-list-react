@@ -5,7 +5,7 @@ export const Wrapper = styled.form`
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
 
-    @media(max-width: 767px) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
     }
 `;
@@ -15,18 +15,18 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-    color: #fff;
-    background-color: teal;
+    color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.teal};
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid ${({ theme }) => theme.color.alto};
     transition: 1s;
 
     &:hover {
-    background-color: #009696;
-    transform: scale(1.1);
+        filter: brightness(110%);
+        transform: scale(1.1);
     }
 
     &:active {
-    background-color: #00afaf;
+        filter: brightness(120%);
     }
 `;
