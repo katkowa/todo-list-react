@@ -1,4 +1,4 @@
-import { useLocalStorage } from "./useLocalStorage";
+import { useLocalStorage } from "../../common/useLocalStorage";
 
 export const useTasks = () => {
     const [tasks, setTasks] = useLocalStorage("tasks", []);
